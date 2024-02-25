@@ -1,24 +1,23 @@
-# README
+# notes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The `model` is the layer that communicates with the database.
 
-Things you may want to cover:
+The center of all in a MVC application is the `controller`.
 
-* Ruby version
+When you generate a new `controller`, beside the controller itself a `view` and a `helper` are also created.
 
-* System dependencies
+Because the root route is special route you use `#` instead of `/`.
 
-* Configuration
+The controller class name must match the `.rb` file name.
 
-* Database creation
+Every controller must inherit from the `ApplicationController`.
+```ruby
+class HomeController < ApplicationController
+  ...
+end
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ERB consists of 3 main parts:
+- The logic part: `<% %>`
+- The rendering part: `<%= %>`
+- The commenting part: `<%# %>`
